@@ -43,8 +43,8 @@ podTemplate(label: '12-mall',
         stage('Deploy'){
             container('git'){
 		        kubernetesDeploy(kubeconfigId: 'kube-cred', 	// REQUIRED
-	                 configs: '**/kubernetes/*.yaml',           // REQUIRED
-	                 enableConfigSubstitution: true
+	                    configs: '**/kubernetes/*.yaml',           // REQUIRED
+	                    enableConfigSubstitution: true
 	            )
             }
          }
